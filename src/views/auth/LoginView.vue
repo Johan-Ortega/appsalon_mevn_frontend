@@ -6,7 +6,7 @@
     const toast = inject('toast')
     const router = useRouter()
 
-    const handleSubmit = async(formData) => {
+    const handleSubmit = async (formData) => {
         try {
             const { data: {token} } = await AuthAPI.login(formData)
             localStorage.setItem('AUTH_TOKEN', token)
